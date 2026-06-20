@@ -17,5 +17,3 @@ const fetchData = async () => {
   }
 };
 fetchData();
-
-const tbody = document.querySelector("");
