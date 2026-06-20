@@ -1,0 +1,21 @@
+const fetchData = async () => {
+  const res = await fetch("http://localhost:8000/users");
+  const data = await res.json();
+  console.log(data);
+
+  //insert data to html file
+  const tbody = document.querySelector("#users tbody");
+
+  if (data && data.length) {
+    data.forEach((user) => {
+      tbody.innerHTML += `<tr>
+                <td>${user.id}</td>
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+            </tr>`;
+    });
+  }
+};
+fetchData();
+
+const tbody = document.querySelector("");
